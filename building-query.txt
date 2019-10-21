@@ -1,0 +1,14 @@
+// Toronto (city) area by id
+rel(324211); map_to_area->.TO;
+
+// parkdale for testing
+//rel(7449409); map_to_area->.PD; 
+
+// get buildings inside the city 
+(
+	way(area.TO)[building];
+	rel(area.TO)[building];
+);
+// recurse down to nodes
+(._;>;);
+out meta;

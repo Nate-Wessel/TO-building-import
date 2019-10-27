@@ -8,12 +8,3 @@ UPDATE tobuild_polygon SET
 	centroid = ST_Centroid(way),
 	orig_node_count = ST_NPoints(way),
 	simp_node_count = ST_Npoints( ST_Simplify( ST_Transform(way,32617), 0.15) );
-
-/*
-SELECT 
-	SUM(orig_node_count) AS orig, 
-	SUM(simp_node_count) AS simp,
-	SUM(orig_node_count) - SUM(simp_node_count) AS surplus,
-	(SUM(orig_node_count)-SUM(simp_node_count)) / SUM(orig_node_count)::real AS surplus_ratio
-FROM tobuild_polygon;
-*/

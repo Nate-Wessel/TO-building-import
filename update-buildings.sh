@@ -3,4 +3,4 @@ wget -O buildings.osm --post-file=building-query.txt https://overpass-api.de/api
 # populate database
 osm2pgsql --slim --hstore-all -x --prefix tobuild --proj 4326 --style building.style -d osm buildings.osm
 # add/update stuff
-psql -d osm -f simplification.sql
+psql -d osm -f analyze-osm.sql

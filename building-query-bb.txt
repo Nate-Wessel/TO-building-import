@@ -6,8 +6,10 @@
 (
 	way[building];
 	rel[building];
+	way(r);
 )->.builds;
 .builds out meta;
+
 // recurse down to nodes
-.builds >;
+node(w.builds);
 out skel;

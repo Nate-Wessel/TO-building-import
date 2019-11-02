@@ -11,6 +11,6 @@ node,way   amenity             text  polygon
 node,way   addr:housename      text  polygon
 node,way   addr:housenumber    text  polygon
 
-node,way   osm_user            text
-node,way   osm_version         integer
-node,way   osm_timestamp       timestamptz(0)
+way        osm_user            text
+way        osm_version         integer
+way        osm_timestamp       timestamptz(0)

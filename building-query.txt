@@ -4,11 +4,12 @@ rel(324211); map_to_area->.TO;
 // parkdale for testing
 //rel(7449409); map_to_area->.PD; 
 
-// get buildings inside the city 
+// get buildings inside the boundary
 (
 	way(area.TO)[building];
 	rel(area.TO)[building];
-);
+)->.builds;
+.builds out meta;
 // recurse down to nodes
-(._;>;);
-out meta;
+.builds >;
+out skel;

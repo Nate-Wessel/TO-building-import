@@ -9,7 +9,7 @@ rel(324211); map_to_area->.TO;
 	way(area.TO)[building];
 	rel(area.TO)[building];
 )->.builds;
-.builds out meta;
-// recurse down to nodes
-.builds >;
-out skel;
+// recurse down to ways and nodes
+(.builds;>;); 
+// meta needed for user_ids
+out meta;

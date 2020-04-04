@@ -5,9 +5,9 @@ library('tidyverse')
 library('spatstat')
 
 # read csv with numeric x,y,w values
-d = read_csv('~/scripts/to-build-import/weighted-centroids.csv')
+d = read_csv('~/centroids.csv')
 # maximum w per cell
-maxweight = 1000
+maxweight = 250
 results = tibble(
 	x1=numeric(),x2=numeric(),
 	y1=numeric(),y2=numeric(),
